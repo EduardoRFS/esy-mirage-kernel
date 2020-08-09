@@ -3,3 +3,9 @@
 (include dune.config)
 
 (include dune.build)
+
+(executable
+ (name main)
+ (public_name noop)
+ (libraries lwt mirage-time mirage-logs duration mirage-unix mirage-clock-unix mirage-bootvar-unix functoria-runtime mirage-types-lwt mirage-types mirage-runtime)
+ (modules Unikernel main key_gen))
