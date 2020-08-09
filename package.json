@@ -1,6 +1,10 @@
 {
   "esy": {
-    "buildsInSource": "_build"
+    "buildsInSource": "_build",
+    "build": "dune build -p uni-fucking-kernel"
+  },
+  "scripts": {
+    "start": "esy x main"
   },
   "dependencies": {
     "@esy-ocaml/reason": "^3.6.0",
