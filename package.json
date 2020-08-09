@@ -1,0 +1,14 @@
+{
+  "dependencies": {
+    "ocaml": "4.10.0",
+    "@opam/dune": "^2.6.2",
+    "@opam/mirage": "^3.8.0",
+    "@opam/mirage-types": "^3.8.0",
+    "@opam/mirage-runtime": "^3.8.0",
+    "@opam/mirage-logs": "^1.2.0",
+    "@opam/mirage-clock-unix": "^3.0.1",
+    "@opam/mirage-bootvar-unix": "^0.1.0",
+    "@opam/mirage-unix": "^4.0.0",
+    "@opam/lwt": "^5.3.0"
+  }
+}
