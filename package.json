@@ -22,7 +22,7 @@
     "@opam/ocamlgraph": "1.8.8"
   },
   "devDependencies": {
-    "reason-mobile": "github:EduardoRFS/reason-mobile:generate.json#fd51cc76b41df3bcb163841d902d23aa52a66a13"
+    "reason-mobile": "github:EduardoRFS/reason-mobile:generate.json#ca7b8c8330b1b071ed1e1c1491c3ca2764907976"
   },
   "resolutions": {
     "@opam/num": "github:dune-universe/num:num.opam#bdb2d7653e927e142b701b51d89f393471279713"

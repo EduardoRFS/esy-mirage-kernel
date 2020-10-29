@@ -35,6 +35,8 @@ jobs:
         system: [ubuntu, macos]
         target:
           [
+            android.arm64,
+            android.x86_64,
             ios.arm64,
             ios.simulator.x86_64,
             linux.musl.arm64,
