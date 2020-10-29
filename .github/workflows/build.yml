@@ -1,0 +1,79 @@
+name: Esy Mirage Kernel
+
+on: [push, pull_request]
+
+jobs:
+  native:
+    name: Build for Native
+
+    strategy:
+      matrix:
+        system: [ubuntu-latest, macos-latest]
+
+    runs-on: ${{ matrix.system }}
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - uses: actions/setup-node@v2-beta
+        with:
+          node-version: 14
+
+      - name: Install esy
+        run: npm install -g esy
+
+      - uses: EduardoRFS/github-action@8c8a899590cabc093e0430c9207f75d87562cc7b
+        with:
+          cache-key: ${{ hashFiles('esy.lock/index.json') }}
+
+  cross_compile:
+    needs: native
+    strategy:
+      fail-fast: false
+      matrix:
+        system: [ubuntu, macos]
+        target:
+          [
+            ios.arm64,
+            ios.simulator.x86_64,
+            linux.musl.arm64,
+            linux.musl.x86_64,
+            freebsd.x86_64,
+          ]
+        exclude:
+          - system: ubuntu
+            target: ios.arm64
+          - system: ubuntu
+            target: ios.simulator.x86_64
+          ## TODO: fix linux.musl + macOS on the CI
+          - system: macos
+            target: linux.musl.arm64
+          - system: macos
+            target: linux.musl.x86_64
+          - system: macos
+            target: freebsd.x86_64
+
+    name: Build ${{ matrix.target }} on ${{ matrix.system }}
+    runs-on: ${{ matrix.system }}-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - uses: actions/setup-node@v2-beta
+        with:
+          node-version: 14
+
+      - name: Install esy
+        run: npm install -g esy
+
+      - uses: EduardoRFS/github-action@8c8a899590cabc093e0430c9207f75d87562cc7b
+        with:
+          cache-key: ${{ hashFiles('esy.lock/index.json') }}
+
+      - name: Generate wrapper
+        run: esy generate ${{ matrix.target }}
+
+      - name: Build ${{ matrix.target }}
+        run: esy @${{ matrix.target }} build
