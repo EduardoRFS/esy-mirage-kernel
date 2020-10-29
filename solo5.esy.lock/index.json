@@ -1,6 +1,6 @@
 {
-  "checksum": "107d729c5340a315e146c2cfeade68af",
-  "root": "esy-mirage-kernel@link-dev:./package.json",
+  "checksum": "f64891741cd712df97e1914bdb16b5c1",
+  "root": "solo5@link-dev:./package.json",
   "node": {
     "yarn-pkg-config@github:esy-ocaml/yarn-pkg-config#db3a0b63883606dd57c54a7158d560d6cba8cd79@d41d8cd9": {
       "id":
@@ -17,6 +17,37 @@
       "overrides": [],
       "dependencies": [],
       "devDependencies": []
+    },
+    "solo5@link-dev:./package.json": {
+      "id": "solo5@link-dev:./package.json",
+      "name": "solo5",
+      "version": "link-dev:./package.json",
+      "source": {
+        "type": "link-dev",
+        "path": ".",
+        "manifest": "package.json"
+      },
+      "overrides": [ "solo5.json" ],
+      "dependencies": [
+        "ocaml@4.10.1002@d41d8cd9", "@opam/ocamlgraph@opam:1.8.8@2767ad0b",
+        "@opam/ocaml-src@opam:4.10.1@fab80d73",
+        "@opam/ocaml-freestanding@github:EduardoRFS/ocaml-freestanding:opam#6fb09cb8b44bacc52a8beb411577c2b5ee8a1785@a3c0bb39",
+        "@opam/mirage-unix@opam:4.0.0@644832e0",
+        "@opam/mirage-types-lwt@opam:3.9.0@25d91299",
+        "@opam/mirage-types@opam:3.9.0@f6d17f00",
+        "@opam/mirage-solo5@github:EduardoRFS/mirage-solo5:mirage-solo5.opam#3278f33505c5f98f1dac31c6185742a35fdfbc89@48fbb0a7",
+        "@opam/mirage-runtime@opam:3.9.0@74140b61",
+        "@opam/mirage-logs@opam:1.2.0@e5ca3efb",
+        "@opam/mirage-clock-unix@opam:3.0.1@23588b02",
+        "@opam/mirage-clock-freestanding@opam:3.0.1@39c79eb0",
+        "@opam/mirage-bootvar-unix@opam:0.1.0@ceb53732",
+        "@opam/mirage-bootvar-solo5@opam:0.6.0@d0d02e04",
+        "@opam/mirage@opam:3.9.0@c8b03421", "@opam/lwt@opam:5.3.0@0c09f517",
+        "@opam/dune@opam:2.7.1@f5f493bc", "@esy-ocaml/reason@3.6.2@d41d8cd9"
+      ],
+      "devDependencies": [
+        "reason-mobile@github:EduardoRFS/reason-mobile:generate.json#ca7b8c8330b1b071ed1e1c1491c3ca2764907976@d41d8cd9"
+      ]
     },
     "reason-mobile@github:EduardoRFS/reason-mobile:generate.json#ca7b8c8330b1b071ed1e1c1491c3ca2764907976@d41d8cd9": {
       "id":
@@ -55,32 +86,6 @@
       "dependencies": [],
       "devDependencies": []
     },
-    "esy-mirage-kernel@link-dev:./package.json": {
-      "id": "esy-mirage-kernel@link-dev:./package.json",
-      "name": "esy-mirage-kernel",
-      "version": "link-dev:./package.json",
-      "source": {
-        "type": "link-dev",
-        "path": ".",
-        "manifest": "package.json"
-      },
-      "overrides": [],
-      "dependencies": [
-        "ocaml@4.10.1002@d41d8cd9", "@opam/ocamlgraph@opam:1.8.8@2767ad0b",
-        "@opam/mirage-unix@opam:4.0.0@644832e0",
-        "@opam/mirage-types-lwt@opam:3.9.0@25d91299",
-        "@opam/mirage-types@opam:3.9.0@f6d17f00",
-        "@opam/mirage-runtime@opam:3.9.0@74140b61",
-        "@opam/mirage-logs@opam:1.2.0@e5ca3efb",
-        "@opam/mirage-clock-unix@opam:3.0.1@23588b02",
-        "@opam/mirage-bootvar-unix@opam:0.1.0@ceb53732",
-        "@opam/mirage@opam:3.9.0@c8b03421", "@opam/lwt@opam:5.3.0@0c09f517",
-        "@opam/dune@opam:2.7.1@f5f493bc", "@esy-ocaml/reason@3.6.2@d41d8cd9"
-      ],
-      "devDependencies": [
-        "reason-mobile@github:EduardoRFS/reason-mobile:generate.json#ca7b8c8330b1b071ed1e1c1491c3ca2764907976@d41d8cd9"
-      ]
-    },
     "esy-m4@github:esy-packages/esy-m4#c7cf0ac9221be2b1f9d90e83559ca08397a629e7@d41d8cd9": {
       "id":
         "esy-m4@github:esy-packages/esy-m4#c7cf0ac9221be2b1f9d90e83559ca08397a629e7@d41d8cd9",
@@ -110,7 +115,7 @@
         "opam": {
           "name": "yojson",
           "version": "1.7.0",
-          "path": "esy.lock/opam/yojson.1.7.0"
+          "path": "solo5.esy.lock/opam/yojson.1.7.0"
         }
       },
       "overrides": [],
@@ -138,7 +143,7 @@
         "opam": {
           "name": "topkg",
           "version": "1.0.3",
-          "path": "esy.lock/opam/topkg.1.0.3"
+          "path": "solo5.esy.lock/opam/topkg.1.0.3"
         }
       },
       "overrides": [],
@@ -164,7 +169,7 @@
         "opam": {
           "name": "stdlib-shims",
           "version": "0.1.0",
-          "path": "esy.lock/opam/stdlib-shims.0.1.0"
+          "path": "solo5.esy.lock/opam/stdlib-shims.0.1.0"
         }
       },
       "overrides": [],
@@ -175,6 +180,54 @@
       "devDependencies": [
         "ocaml@4.10.1002@d41d8cd9", "@opam/dune@opam:2.7.1@f5f493bc"
       ]
+    },
+    "@opam/solo5-bindings-xen@opam:0.6.7@c7cba1e9": {
+      "id": "@opam/solo5-bindings-xen@opam:0.6.7@c7cba1e9",
+      "name": "@opam/solo5-bindings-xen",
+      "version": "opam:0.6.7",
+      "source": {
+        "type": "install",
+        "source": [
+          "archive:https://opam.ocaml.org/cache/sha512/f6/f651824fa131d1676e8449e734260c6b9515fc47fd9335f9b8a24498ccd1283d3c1cd512e3009c89fe99eb70204e9adff0858440694a1f937afc78f09b73cdc7#sha512:f651824fa131d1676e8449e734260c6b9515fc47fd9335f9b8a24498ccd1283d3c1cd512e3009c89fe99eb70204e9adff0858440694a1f937afc78f09b73cdc7",
+          "archive:https://github.com/Solo5/solo5/releases/download/v0.6.7/solo5-v0.6.7.tar.gz#sha512:f651824fa131d1676e8449e734260c6b9515fc47fd9335f9b8a24498ccd1283d3c1cd512e3009c89fe99eb70204e9adff0858440694a1f937afc78f09b73cdc7"
+        ],
+        "opam": {
+          "name": "solo5-bindings-xen",
+          "version": "0.6.7",
+          "path": "solo5.esy.lock/opam/solo5-bindings-xen.0.6.7"
+        }
+      },
+      "overrides": [],
+      "dependencies": [
+        "@opam/conf-pkg-config@opam:1.3@93481236",
+        "@opam/conf-libseccomp@opam:1@2c2427da",
+        "@esy-ocaml/substs@0.0.1@d41d8cd9"
+      ],
+      "devDependencies": [ "@opam/conf-pkg-config@opam:1.3@93481236" ]
+    },
+    "@opam/solo5-bindings-hvt@opam:0.6.7@04ee8b64": {
+      "id": "@opam/solo5-bindings-hvt@opam:0.6.7@04ee8b64",
+      "name": "@opam/solo5-bindings-hvt",
+      "version": "opam:0.6.7",
+      "source": {
+        "type": "install",
+        "source": [
+          "archive:https://opam.ocaml.org/cache/sha512/f6/f651824fa131d1676e8449e734260c6b9515fc47fd9335f9b8a24498ccd1283d3c1cd512e3009c89fe99eb70204e9adff0858440694a1f937afc78f09b73cdc7#sha512:f651824fa131d1676e8449e734260c6b9515fc47fd9335f9b8a24498ccd1283d3c1cd512e3009c89fe99eb70204e9adff0858440694a1f937afc78f09b73cdc7",
+          "archive:https://github.com/Solo5/solo5/releases/download/v0.6.7/solo5-v0.6.7.tar.gz#sha512:f651824fa131d1676e8449e734260c6b9515fc47fd9335f9b8a24498ccd1283d3c1cd512e3009c89fe99eb70204e9adff0858440694a1f937afc78f09b73cdc7"
+        ],
+        "opam": {
+          "name": "solo5-bindings-hvt",
+          "version": "0.6.7",
+          "path": "solo5.esy.lock/opam/solo5-bindings-hvt.0.6.7"
+        }
+      },
+      "overrides": [],
+      "dependencies": [
+        "@opam/conf-pkg-config@opam:1.3@93481236",
+        "@opam/conf-libseccomp@opam:1@2c2427da",
+        "@esy-ocaml/substs@0.0.1@d41d8cd9"
+      ],
+      "devDependencies": [ "@opam/conf-pkg-config@opam:1.3@93481236" ]
     },
     "@opam/sexplib0@opam:v0.14.0@ddeb6438": {
       "id": "@opam/sexplib0@opam:v0.14.0@ddeb6438",
@@ -189,7 +242,7 @@
         "opam": {
           "name": "sexplib0",
           "version": "v0.14.0",
-          "path": "esy.lock/opam/sexplib0.v0.14.0"
+          "path": "solo5.esy.lock/opam/sexplib0.v0.14.0"
         }
       },
       "overrides": [],
@@ -214,7 +267,7 @@
         "opam": {
           "name": "sexplib",
           "version": "v0.14.0",
-          "path": "esy.lock/opam/sexplib.v0.14.0"
+          "path": "solo5.esy.lock/opam/sexplib.v0.14.0"
         }
       },
       "overrides": [],
@@ -241,7 +294,7 @@
         "opam": {
           "name": "seq",
           "version": "base",
-          "path": "esy.lock/opam/seq.base"
+          "path": "solo5.esy.lock/opam/seq.base"
         }
       },
       "overrides": [],
@@ -263,7 +316,7 @@
         "opam": {
           "name": "rresult",
           "version": "0.6.0",
-          "path": "esy.lock/opam/rresult.0.6.0"
+          "path": "solo5.esy.lock/opam/rresult.0.6.0"
         }
       },
       "overrides": [],
@@ -291,7 +344,7 @@
         "opam": {
           "name": "result",
           "version": "1.5",
-          "path": "esy.lock/opam/result.1.5"
+          "path": "solo5.esy.lock/opam/result.1.5"
         }
       },
       "overrides": [],
@@ -316,7 +369,7 @@
         "opam": {
           "name": "re",
           "version": "1.9.0",
-          "path": "esy.lock/opam/re.1.9.0"
+          "path": "solo5.esy.lock/opam/re.1.9.0"
         }
       },
       "overrides": [],
@@ -342,7 +395,7 @@
         "opam": {
           "name": "ptime",
           "version": "0.8.5",
-          "path": "esy.lock/opam/ptime.0.8.5"
+          "path": "solo5.esy.lock/opam/ptime.0.8.5"
         }
       },
       "overrides": [],
@@ -370,7 +423,7 @@
         "opam": {
           "name": "ppxfind",
           "version": "1.4",
-          "path": "esy.lock/opam/ppxfind.1.4"
+          "path": "solo5.esy.lock/opam/ppxfind.1.4"
         }
       },
       "overrides": [],
@@ -398,7 +451,7 @@
         "opam": {
           "name": "ppx_tools_versioned",
           "version": "5.4.0",
-          "path": "esy.lock/opam/ppx_tools_versioned.5.4.0"
+          "path": "solo5.esy.lock/opam/ppx_tools_versioned.5.4.0"
         }
       },
       "overrides": [],
@@ -426,7 +479,7 @@
         "opam": {
           "name": "ppx_tools",
           "version": "6.2",
-          "path": "esy.lock/opam/ppx_tools.6.2"
+          "path": "solo5.esy.lock/opam/ppx_tools.6.2"
         }
       },
       "overrides": [],
@@ -451,7 +504,7 @@
         "opam": {
           "name": "ppx_deriving_yojson",
           "version": "3.5.3",
-          "path": "esy.lock/opam/ppx_deriving_yojson.3.5.3"
+          "path": "solo5.esy.lock/opam/ppx_deriving_yojson.3.5.3"
         }
       },
       "overrides": [],
@@ -484,7 +537,7 @@
         "opam": {
           "name": "ppx_deriving",
           "version": "4.5",
-          "path": "esy.lock/opam/ppx_deriving.4.5"
+          "path": "solo5.esy.lock/opam/ppx_deriving.4.5"
         }
       },
       "overrides": [],
@@ -518,7 +571,7 @@
         "opam": {
           "name": "ppx_derivers",
           "version": "1.2.1",
-          "path": "esy.lock/opam/ppx_derivers.1.2.1"
+          "path": "solo5.esy.lock/opam/ppx_derivers.1.2.1"
         }
       },
       "overrides": [],
@@ -543,7 +596,7 @@
         "opam": {
           "name": "ppx_cstruct",
           "version": "5.2.0",
-          "path": "esy.lock/opam/ppx_cstruct.5.2.0"
+          "path": "solo5.esy.lock/opam/ppx_cstruct.5.2.0"
         }
       },
       "overrides": [],
@@ -577,7 +630,7 @@
         "opam": {
           "name": "parsexp",
           "version": "v0.14.0",
-          "path": "esy.lock/opam/parsexp.v0.14.0"
+          "path": "solo5.esy.lock/opam/parsexp.v0.14.0"
         }
       },
       "overrides": [],
@@ -604,7 +657,7 @@
         "opam": {
           "name": "parse-argv",
           "version": "0.2.0",
-          "path": "esy.lock/opam/parse-argv.0.2.0"
+          "path": "solo5.esy.lock/opam/parse-argv.0.2.0"
         }
       },
       "overrides": [],
@@ -631,7 +684,7 @@
         "opam": {
           "name": "ocplib-endian",
           "version": "1.1",
-          "path": "esy.lock/opam/ocplib-endian.1.1"
+          "path": "solo5.esy.lock/opam/ocplib-endian.1.1"
         }
       },
       "overrides": [],
@@ -659,7 +712,7 @@
         "opam": {
           "name": "ocamlgraph",
           "version": "1.8.8",
-          "path": "esy.lock/opam/ocamlgraph.1.8.8"
+          "path": "solo5.esy.lock/opam/ocamlgraph.1.8.8"
         }
       },
       "overrides": [],
@@ -683,13 +736,13 @@
         "opam": {
           "name": "ocamlfind",
           "version": "1.8.1",
-          "path": "esy.lock/opam/ocamlfind.1.8.1"
+          "path": "solo5.esy.lock/opam/ocamlfind.1.8.1"
         }
       },
       "overrides": [
         {
           "opamoverride":
-            "esy.lock/overrides/opam__s__ocamlfind_opam__c__1.8.1_opam_override"
+            "solo5.esy.lock/overrides/opam__s__ocamlfind_opam__c__1.8.1_opam_override"
         }
       ],
       "dependencies": [
@@ -711,15 +764,37 @@
         "opam": {
           "name": "ocamlbuild",
           "version": "0.14.0",
-          "path": "esy.lock/opam/ocamlbuild.0.14.0"
+          "path": "solo5.esy.lock/opam/ocamlbuild.0.14.0"
         }
       },
       "overrides": [
         {
           "opamoverride":
-            "esy.lock/overrides/opam__s__ocamlbuild_opam__c__0.14.0_opam_override"
+            "solo5.esy.lock/overrides/opam__s__ocamlbuild_opam__c__0.14.0_opam_override"
         }
       ],
+      "dependencies": [
+        "ocaml@4.10.1002@d41d8cd9", "@esy-ocaml/substs@0.0.1@d41d8cd9"
+      ],
+      "devDependencies": [ "ocaml@4.10.1002@d41d8cd9" ]
+    },
+    "@opam/ocaml-src@opam:4.10.1@fab80d73": {
+      "id": "@opam/ocaml-src@opam:4.10.1@fab80d73",
+      "name": "@opam/ocaml-src",
+      "version": "opam:4.10.1",
+      "source": {
+        "type": "install",
+        "source": [
+          "archive:https://opam.ocaml.org/cache/sha256/d1/d1dd3d39dc2d06aca694e8a97983d25d5730c19ad8ceff83c3072fd05adaf28e#sha256:d1dd3d39dc2d06aca694e8a97983d25d5730c19ad8ceff83c3072fd05adaf28e",
+          "archive:https://github.com/ocaml/ocaml/archive/4.10.1.tar.gz#sha256:d1dd3d39dc2d06aca694e8a97983d25d5730c19ad8ceff83c3072fd05adaf28e"
+        ],
+        "opam": {
+          "name": "ocaml-src",
+          "version": "4.10.1",
+          "path": "solo5.esy.lock/opam/ocaml-src.4.10.1"
+        }
+      },
+      "overrides": [],
       "dependencies": [
         "ocaml@4.10.1002@d41d8cd9", "@esy-ocaml/substs@0.0.1@d41d8cd9"
       ],
@@ -738,7 +813,7 @@
         "opam": {
           "name": "ocaml-migrate-parsetree",
           "version": "1.8.0",
-          "path": "esy.lock/opam/ocaml-migrate-parsetree.1.8.0"
+          "path": "solo5.esy.lock/opam/ocaml-migrate-parsetree.1.8.0"
         }
       },
       "overrides": [],
@@ -751,6 +826,50 @@
         "ocaml@4.10.1002@d41d8cd9", "@opam/result@opam:1.5@6b753c82",
         "@opam/ppx_derivers@opam:1.2.1@ecf0aa45",
         "@opam/dune@opam:2.7.1@f5f493bc"
+      ]
+    },
+    "@opam/ocaml-freestanding@github:EduardoRFS/ocaml-freestanding:opam#6fb09cb8b44bacc52a8beb411577c2b5ee8a1785@a3c0bb39": {
+      "id":
+        "@opam/ocaml-freestanding@github:EduardoRFS/ocaml-freestanding:opam#6fb09cb8b44bacc52a8beb411577c2b5ee8a1785@a3c0bb39",
+      "name": "@opam/ocaml-freestanding",
+      "version":
+        "github:EduardoRFS/ocaml-freestanding:opam#6fb09cb8b44bacc52a8beb411577c2b5ee8a1785",
+      "source": {
+        "type": "install",
+        "source": [
+          "github:EduardoRFS/ocaml-freestanding:opam#6fb09cb8b44bacc52a8beb411577c2b5ee8a1785"
+        ]
+      },
+      "overrides": [
+        {
+          "buildEnv": {
+            "PKG_CONFIG_PATH":
+              "#{@opam/solo5-bindings-hvt.lib / 'pkgconfig'}:$PKG_CONFIG_PATH"
+          },
+          "exportedEnv": {
+            "PKG_CONFIG_PATH": {
+              "val":
+                "#{self.lib / 'pkgconfig' }:#{@opam/solo5-bindings-hvt.lib / 'pkgconfig'}:$PKG_CONFIG_PATH",
+              "scope": "global"
+            }
+          },
+          "dependencies": { "@opam/solo5-bindings-hvt": "*" }
+        }
+      ],
+      "dependencies": [
+        "ocaml@4.10.1002@d41d8cd9",
+        "@opam/solo5-bindings-xen@opam:0.6.7@c7cba1e9",
+        "@opam/solo5-bindings-hvt@opam:0.6.7@04ee8b64",
+        "@opam/ocamlfind@opam:1.8.1@ff07b0f9",
+        "@opam/ocaml-src@opam:4.10.1@fab80d73",
+        "@opam/conf-pkg-config@opam:1.3@93481236",
+        "@esy-ocaml/substs@0.0.1@d41d8cd9"
+      ],
+      "devDependencies": [
+        "ocaml@4.10.1002@d41d8cd9",
+        "@opam/solo5-bindings-xen@opam:0.6.7@c7cba1e9",
+        "@opam/solo5-bindings-hvt@opam:0.6.7@04ee8b64",
+        "@opam/conf-pkg-config@opam:1.3@93481236"
       ]
     },
     "@opam/num@github:dune-universe/num:num.opam#bdb2d7653e927e142b701b51d89f393471279713@d41d8cd9": {
@@ -790,7 +909,7 @@
         "opam": {
           "name": "mmap",
           "version": "1.1.0",
-          "path": "esy.lock/opam/mmap.1.1.0"
+          "path": "solo5.esy.lock/opam/mmap.1.1.0"
         }
       },
       "overrides": [],
@@ -815,7 +934,7 @@
         "opam": {
           "name": "mirage-unix",
           "version": "4.0.0",
-          "path": "esy.lock/opam/mirage-unix.4.0.0"
+          "path": "solo5.esy.lock/opam/mirage-unix.4.0.0"
         }
       },
       "overrides": [],
@@ -849,7 +968,7 @@
         "opam": {
           "name": "mirage-types-lwt",
           "version": "3.9.0",
-          "path": "esy.lock/opam/mirage-types-lwt.3.9.0"
+          "path": "solo5.esy.lock/opam/mirage-types-lwt.3.9.0"
         }
       },
       "overrides": [],
@@ -875,7 +994,7 @@
         "opam": {
           "name": "mirage-types",
           "version": "3.9.0",
-          "path": "esy.lock/opam/mirage-types.3.9.0"
+          "path": "solo5.esy.lock/opam/mirage-types.3.9.0"
         }
       },
       "overrides": [],
@@ -925,7 +1044,7 @@
         "opam": {
           "name": "mirage-time",
           "version": "2.0.1",
-          "path": "esy.lock/opam/mirage-time.2.0.1"
+          "path": "solo5.esy.lock/opam/mirage-time.2.0.1"
         }
       },
       "overrides": [],
@@ -951,7 +1070,7 @@
         "opam": {
           "name": "mirage-stack",
           "version": "2.2.0",
-          "path": "esy.lock/opam/mirage-stack.2.2.0"
+          "path": "solo5.esy.lock/opam/mirage-stack.2.2.0"
         }
       },
       "overrides": [],
@@ -970,6 +1089,51 @@
         "@opam/dune@opam:2.7.1@f5f493bc"
       ]
     },
+    "@opam/mirage-solo5@github:EduardoRFS/mirage-solo5:mirage-solo5.opam#3278f33505c5f98f1dac31c6185742a35fdfbc89@48fbb0a7": {
+      "id":
+        "@opam/mirage-solo5@github:EduardoRFS/mirage-solo5:mirage-solo5.opam#3278f33505c5f98f1dac31c6185742a35fdfbc89@48fbb0a7",
+      "name": "@opam/mirage-solo5",
+      "version":
+        "github:EduardoRFS/mirage-solo5:mirage-solo5.opam#3278f33505c5f98f1dac31c6185742a35fdfbc89",
+      "source": {
+        "type": "install",
+        "source": [
+          "github:EduardoRFS/mirage-solo5:mirage-solo5.opam#3278f33505c5f98f1dac31c6185742a35fdfbc89"
+        ]
+      },
+      "overrides": [
+        {
+          "exportedEnv": {
+            "PKG_CONFIG_PATH": {
+              "val": "#{self.lib / 'pkgconfig' }:$PKG_CONFIG_PATH",
+              "scope": "global"
+            }
+          }
+        }
+      ],
+      "dependencies": [
+        "ocaml@4.10.1002@d41d8cd9",
+        "@opam/solo5-bindings-hvt@opam:0.6.7@04ee8b64",
+        "@opam/ocaml-freestanding@github:EduardoRFS/ocaml-freestanding:opam#6fb09cb8b44bacc52a8beb411577c2b5ee8a1785@a3c0bb39",
+        "@opam/mirage-runtime@opam:3.9.0@74140b61",
+        "@opam/metrics@opam:0.2.0@f4ba3192", "@opam/lwt@opam:5.3.0@0c09f517",
+        "@opam/duration@opam:0.1.3@6b488f7c",
+        "@opam/dune@opam:2.7.1@f5f493bc",
+        "@opam/cstruct@opam:6.0.0@a7534811",
+        "@opam/bheap@opam:2.0.0@3d917eb4", "@esy-ocaml/substs@0.0.1@d41d8cd9"
+      ],
+      "devDependencies": [
+        "ocaml@4.10.1002@d41d8cd9",
+        "@opam/solo5-bindings-hvt@opam:0.6.7@04ee8b64",
+        "@opam/ocaml-freestanding@github:EduardoRFS/ocaml-freestanding:opam#6fb09cb8b44bacc52a8beb411577c2b5ee8a1785@a3c0bb39",
+        "@opam/mirage-runtime@opam:3.9.0@74140b61",
+        "@opam/metrics@opam:0.2.0@f4ba3192", "@opam/lwt@opam:5.3.0@0c09f517",
+        "@opam/duration@opam:0.1.3@6b488f7c",
+        "@opam/dune@opam:2.7.1@f5f493bc",
+        "@opam/cstruct@opam:6.0.0@a7534811",
+        "@opam/bheap@opam:2.0.0@3d917eb4"
+      ]
+    },
     "@opam/mirage-runtime@opam:3.9.0@74140b61": {
       "id": "@opam/mirage-runtime@opam:3.9.0@74140b61",
       "name": "@opam/mirage-runtime",
@@ -983,7 +1147,7 @@
         "opam": {
           "name": "mirage-runtime",
           "version": "3.9.0",
-          "path": "esy.lock/opam/mirage-runtime.3.9.0"
+          "path": "solo5.esy.lock/opam/mirage-runtime.3.9.0"
         }
       },
       "overrides": [],
@@ -1014,7 +1178,7 @@
         "opam": {
           "name": "mirage-random",
           "version": "2.0.0",
-          "path": "esy.lock/opam/mirage-random.2.0.0"
+          "path": "solo5.esy.lock/opam/mirage-random.2.0.0"
         }
       },
       "overrides": [],
@@ -1041,7 +1205,7 @@
         "opam": {
           "name": "mirage-protocols",
           "version": "4.0.1",
-          "path": "esy.lock/opam/mirage-protocols.4.0.1"
+          "path": "solo5.esy.lock/opam/mirage-protocols.4.0.1"
         }
       },
       "overrides": [],
@@ -1075,7 +1239,7 @@
         "opam": {
           "name": "mirage-profile",
           "version": "0.9.1",
-          "path": "esy.lock/opam/mirage-profile.0.9.1"
+          "path": "solo5.esy.lock/opam/mirage-profile.0.9.1"
         }
       },
       "overrides": [],
@@ -1105,7 +1269,7 @@
         "opam": {
           "name": "mirage-net",
           "version": "3.0.1",
-          "path": "esy.lock/opam/mirage-net.3.0.1"
+          "path": "solo5.esy.lock/opam/mirage-net.3.0.1"
         }
       },
       "overrides": [],
@@ -1138,7 +1302,7 @@
         "opam": {
           "name": "mirage-logs",
           "version": "1.2.0",
-          "path": "esy.lock/opam/mirage-logs.1.2.0"
+          "path": "solo5.esy.lock/opam/mirage-logs.1.2.0"
         }
       },
       "overrides": [],
@@ -1170,7 +1334,7 @@
         "opam": {
           "name": "mirage-kv",
           "version": "3.0.1",
-          "path": "esy.lock/opam/mirage-kv.3.0.1"
+          "path": "solo5.esy.lock/opam/mirage-kv.3.0.1"
         }
       },
       "overrides": [],
@@ -1200,7 +1364,7 @@
         "opam": {
           "name": "mirage-fs",
           "version": "3.0.1",
-          "path": "esy.lock/opam/mirage-fs.3.0.1"
+          "path": "solo5.esy.lock/opam/mirage-fs.3.0.1"
         }
       },
       "overrides": [],
@@ -1232,7 +1396,7 @@
         "opam": {
           "name": "mirage-flow",
           "version": "2.0.1",
-          "path": "esy.lock/opam/mirage-flow.2.0.1"
+          "path": "solo5.esy.lock/opam/mirage-flow.2.0.1"
         }
       },
       "overrides": [],
@@ -1261,7 +1425,7 @@
         "opam": {
           "name": "mirage-device",
           "version": "2.0.0",
-          "path": "esy.lock/opam/mirage-device.2.0.0"
+          "path": "solo5.esy.lock/opam/mirage-device.2.0.0"
         }
       },
       "overrides": [],
@@ -1288,12 +1452,14 @@
         "opam": {
           "name": "mirage-crypto",
           "version": "0.8.6",
-          "path": "esy.lock/opam/mirage-crypto.0.8.6"
+          "path": "solo5.esy.lock/opam/mirage-crypto.0.8.6"
         }
       },
       "overrides": [],
       "dependencies": [
-        "ocaml@4.10.1002@d41d8cd9", "@opam/eqaf@opam:0.7@e7d6447e",
+        "ocaml@4.10.1002@d41d8cd9",
+        "@opam/ocaml-freestanding@github:EduardoRFS/ocaml-freestanding:opam#6fb09cb8b44bacc52a8beb411577c2b5ee8a1785@a3c0bb39",
+        "@opam/eqaf@opam:0.7@e7d6447e",
         "@opam/dune-configurator@opam:2.7.1@96307faa",
         "@opam/dune@opam:2.7.1@f5f493bc",
         "@opam/cstruct@opam:6.0.0@a7534811",
@@ -1319,7 +1485,7 @@
         "opam": {
           "name": "mirage-console",
           "version": "4.0.0",
-          "path": "esy.lock/opam/mirage-console.4.0.0"
+          "path": "solo5.esy.lock/opam/mirage-console.4.0.0"
         }
       },
       "overrides": [],
@@ -1348,7 +1514,7 @@
         "opam": {
           "name": "mirage-clock-unix",
           "version": "3.0.1",
-          "path": "esy.lock/opam/mirage-clock-unix.3.0.1"
+          "path": "solo5.esy.lock/opam/mirage-clock-unix.3.0.1"
         }
       },
       "overrides": [],
@@ -1360,6 +1526,32 @@
       "devDependencies": [
         "ocaml@4.10.1002@d41d8cd9", "@opam/mirage-clock@opam:3.0.1@edd873ad",
         "@opam/dune-configurator@opam:2.7.1@96307faa",
+        "@opam/dune@opam:2.7.1@f5f493bc"
+      ]
+    },
+    "@opam/mirage-clock-freestanding@opam:3.0.1@39c79eb0": {
+      "id": "@opam/mirage-clock-freestanding@opam:3.0.1@39c79eb0",
+      "name": "@opam/mirage-clock-freestanding",
+      "version": "opam:3.0.1",
+      "source": {
+        "type": "install",
+        "source": [
+          "archive:https://opam.ocaml.org/cache/sha256/43/43e90dd608cf04e96648adbcb3da14b876f68494eeb195291b04e564e06da28a#sha256:43e90dd608cf04e96648adbcb3da14b876f68494eeb195291b04e564e06da28a",
+          "archive:https://github.com/mirage/mirage-clock/releases/download/v3.0.1/mirage-clock-v3.0.1.tbz#sha256:43e90dd608cf04e96648adbcb3da14b876f68494eeb195291b04e564e06da28a"
+        ],
+        "opam": {
+          "name": "mirage-clock-freestanding",
+          "version": "3.0.1",
+          "path": "solo5.esy.lock/opam/mirage-clock-freestanding.3.0.1"
+        }
+      },
+      "overrides": [],
+      "dependencies": [
+        "ocaml@4.10.1002@d41d8cd9", "@opam/mirage-clock@opam:3.0.1@edd873ad",
+        "@opam/dune@opam:2.7.1@f5f493bc", "@esy-ocaml/substs@0.0.1@d41d8cd9"
+      ],
+      "devDependencies": [
+        "ocaml@4.10.1002@d41d8cd9", "@opam/mirage-clock@opam:3.0.1@edd873ad",
         "@opam/dune@opam:2.7.1@f5f493bc"
       ]
     },
@@ -1376,7 +1568,7 @@
         "opam": {
           "name": "mirage-clock",
           "version": "3.0.1",
-          "path": "esy.lock/opam/mirage-clock.3.0.1"
+          "path": "solo5.esy.lock/opam/mirage-clock.3.0.1"
         }
       },
       "overrides": [],
@@ -1401,7 +1593,7 @@
         "opam": {
           "name": "mirage-channel",
           "version": "4.0.1",
-          "path": "esy.lock/opam/mirage-channel.4.0.1"
+          "path": "solo5.esy.lock/opam/mirage-channel.4.0.1"
         }
       },
       "overrides": [],
@@ -1431,7 +1623,7 @@
         "opam": {
           "name": "mirage-bootvar-unix",
           "version": "0.1.0",
-          "path": "esy.lock/opam/mirage-bootvar-unix.0.1.0"
+          "path": "solo5.esy.lock/opam/mirage-bootvar-unix.0.1.0"
         }
       },
       "overrides": [],
@@ -1442,6 +1634,35 @@
       ],
       "devDependencies": [
         "ocaml@4.10.1002@d41d8cd9", "@opam/parse-argv@opam:0.2.0@42beb442",
+        "@opam/lwt@opam:5.3.0@0c09f517", "@opam/dune@opam:2.7.1@f5f493bc"
+      ]
+    },
+    "@opam/mirage-bootvar-solo5@opam:0.6.0@d0d02e04": {
+      "id": "@opam/mirage-bootvar-solo5@opam:0.6.0@d0d02e04",
+      "name": "@opam/mirage-bootvar-solo5",
+      "version": "opam:0.6.0",
+      "source": {
+        "type": "install",
+        "source": [
+          "archive:https://opam.ocaml.org/cache/sha256/11/113ea304f8c418d3045aa9611492d200ec8ce3b06c40a91b0aa3ca190d691737#sha256:113ea304f8c418d3045aa9611492d200ec8ce3b06c40a91b0aa3ca190d691737",
+          "archive:https://github.com/mirage/mirage-bootvar-solo5/releases/download/v0.6.0/mirage-bootvar-solo5-v0.6.0.tbz#sha256:113ea304f8c418d3045aa9611492d200ec8ce3b06c40a91b0aa3ca190d691737"
+        ],
+        "opam": {
+          "name": "mirage-bootvar-solo5",
+          "version": "0.6.0",
+          "path": "solo5.esy.lock/opam/mirage-bootvar-solo5.0.6.0"
+        }
+      },
+      "overrides": [],
+      "dependencies": [
+        "ocaml@4.10.1002@d41d8cd9", "@opam/parse-argv@opam:0.2.0@42beb442",
+        "@opam/mirage-solo5@github:EduardoRFS/mirage-solo5:mirage-solo5.opam#3278f33505c5f98f1dac31c6185742a35fdfbc89@48fbb0a7",
+        "@opam/lwt@opam:5.3.0@0c09f517", "@opam/dune@opam:2.7.1@f5f493bc",
+        "@esy-ocaml/substs@0.0.1@d41d8cd9"
+      ],
+      "devDependencies": [
+        "ocaml@4.10.1002@d41d8cd9", "@opam/parse-argv@opam:0.2.0@42beb442",
+        "@opam/mirage-solo5@github:EduardoRFS/mirage-solo5:mirage-solo5.opam#3278f33505c5f98f1dac31c6185742a35fdfbc89@48fbb0a7",
         "@opam/lwt@opam:5.3.0@0c09f517", "@opam/dune@opam:2.7.1@f5f493bc"
       ]
     },
@@ -1458,7 +1679,7 @@
         "opam": {
           "name": "mirage-block",
           "version": "2.0.1",
-          "path": "esy.lock/opam/mirage-block.2.0.1"
+          "path": "solo5.esy.lock/opam/mirage-block.2.0.1"
         }
       },
       "overrides": [],
@@ -1489,7 +1710,7 @@
         "opam": {
           "name": "mirage",
           "version": "3.9.0",
-          "path": "esy.lock/opam/mirage.3.9.0"
+          "path": "solo5.esy.lock/opam/mirage.3.9.0"
         }
       },
       "overrides": [],
@@ -1511,6 +1732,32 @@
         "@opam/astring@opam:0.8.5@1300cee8"
       ]
     },
+    "@opam/metrics@opam:0.2.0@f4ba3192": {
+      "id": "@opam/metrics@opam:0.2.0@f4ba3192",
+      "name": "@opam/metrics",
+      "version": "opam:0.2.0",
+      "source": {
+        "type": "install",
+        "source": [
+          "archive:https://opam.ocaml.org/cache/sha256/0f/0f4ff94e0b632dffd8b1d6c180cc0e49873cf29ba6a6f8e1a3e8d811252b4148#sha256:0f4ff94e0b632dffd8b1d6c180cc0e49873cf29ba6a6f8e1a3e8d811252b4148",
+          "archive:https://github.com/mirage/metrics/releases/download/0.2.0/metrics-0.2.0.tbz#sha256:0f4ff94e0b632dffd8b1d6c180cc0e49873cf29ba6a6f8e1a3e8d811252b4148"
+        ],
+        "opam": {
+          "name": "metrics",
+          "version": "0.2.0",
+          "path": "solo5.esy.lock/opam/metrics.0.2.0"
+        }
+      },
+      "overrides": [],
+      "dependencies": [
+        "ocaml@4.10.1002@d41d8cd9", "@opam/fmt@opam:0.8.9@e0843a5b",
+        "@opam/dune@opam:2.7.1@f5f493bc", "@esy-ocaml/substs@0.0.1@d41d8cd9"
+      ],
+      "devDependencies": [
+        "ocaml@4.10.1002@d41d8cd9", "@opam/fmt@opam:0.8.9@e0843a5b",
+        "@opam/dune@opam:2.7.1@f5f493bc"
+      ]
+    },
     "@opam/merlin-extend@opam:0.6@404f814c": {
       "id": "@opam/merlin-extend@opam:0.6@404f814c",
       "name": "@opam/merlin-extend",
@@ -1524,7 +1771,7 @@
         "opam": {
           "name": "merlin-extend",
           "version": "0.6",
-          "path": "esy.lock/opam/merlin-extend.0.6"
+          "path": "solo5.esy.lock/opam/merlin-extend.0.6"
         }
       },
       "overrides": [],
@@ -1549,7 +1796,7 @@
         "opam": {
           "name": "menhirSdk",
           "version": "20200624",
-          "path": "esy.lock/opam/menhirSdk.20200624"
+          "path": "solo5.esy.lock/opam/menhirSdk.20200624"
         }
       },
       "overrides": [],
@@ -1574,7 +1821,7 @@
         "opam": {
           "name": "menhirLib",
           "version": "20200624",
-          "path": "esy.lock/opam/menhirLib.20200624"
+          "path": "solo5.esy.lock/opam/menhirLib.20200624"
         }
       },
       "overrides": [],
@@ -1599,7 +1846,7 @@
         "opam": {
           "name": "menhir",
           "version": "20200624",
-          "path": "esy.lock/opam/menhir.20200624"
+          "path": "solo5.esy.lock/opam/menhir.20200624"
         }
       },
       "overrides": [],
@@ -1627,7 +1874,7 @@
         "opam": {
           "name": "macaddr",
           "version": "5.0.1",
-          "path": "esy.lock/opam/macaddr.5.0.1"
+          "path": "solo5.esy.lock/opam/macaddr.5.0.1"
         }
       },
       "overrides": [],
@@ -1652,7 +1899,7 @@
         "opam": {
           "name": "lwt",
           "version": "5.3.0",
-          "path": "esy.lock/opam/lwt.5.3.0"
+          "path": "solo5.esy.lock/opam/lwt.5.3.0"
         }
       },
       "overrides": [],
@@ -1689,7 +1936,7 @@
         "opam": {
           "name": "logs",
           "version": "0.7.0",
-          "path": "esy.lock/opam/logs.0.7.0"
+          "path": "solo5.esy.lock/opam/logs.0.7.0"
         }
       },
       "overrides": [],
@@ -1717,7 +1964,7 @@
         "opam": {
           "name": "ipaddr",
           "version": "5.0.1",
-          "path": "esy.lock/opam/ipaddr.5.0.1"
+          "path": "solo5.esy.lock/opam/ipaddr.5.0.1"
         }
       },
       "overrides": [],
@@ -1748,7 +1995,7 @@
         "opam": {
           "name": "io-page-unix",
           "version": "2.3.0",
-          "path": "esy.lock/opam/io-page-unix.2.3.0"
+          "path": "solo5.esy.lock/opam/io-page-unix.2.3.0"
         }
       },
       "overrides": [],
@@ -1776,7 +2023,7 @@
         "opam": {
           "name": "io-page",
           "version": "2.3.0",
-          "path": "esy.lock/opam/io-page.2.3.0"
+          "path": "solo5.esy.lock/opam/io-page.2.3.0"
         }
       },
       "overrides": [],
@@ -1809,7 +2056,7 @@
         "opam": {
           "name": "hex",
           "version": "1.4.0",
-          "path": "esy.lock/opam/hex.1.4.0"
+          "path": "solo5.esy.lock/opam/hex.1.4.0"
         }
       },
       "overrides": [],
@@ -1838,7 +2085,7 @@
         "opam": {
           "name": "functoria-runtime",
           "version": "3.0.3",
-          "path": "esy.lock/opam/functoria-runtime.3.0.3"
+          "path": "solo5.esy.lock/opam/functoria-runtime.3.0.3"
         }
       },
       "overrides": [],
@@ -1867,7 +2114,7 @@
         "opam": {
           "name": "functoria",
           "version": "3.1.1",
-          "path": "esy.lock/opam/functoria.3.1.1"
+          "path": "solo5.esy.lock/opam/functoria.3.1.1"
         }
       },
       "overrides": [],
@@ -1908,7 +2155,7 @@
         "opam": {
           "name": "fpath",
           "version": "0.7.3",
-          "path": "esy.lock/opam/fpath.0.7.3"
+          "path": "solo5.esy.lock/opam/fpath.0.7.3"
         }
       },
       "overrides": [],
@@ -1936,7 +2183,7 @@
         "opam": {
           "name": "fmt",
           "version": "0.8.9",
-          "path": "esy.lock/opam/fmt.0.8.9"
+          "path": "solo5.esy.lock/opam/fmt.0.8.9"
         }
       },
       "overrides": [],
@@ -1968,7 +2215,7 @@
         "opam": {
           "name": "fix",
           "version": "20200131",
-          "path": "esy.lock/opam/fix.20200131"
+          "path": "solo5.esy.lock/opam/fix.20200131"
         }
       },
       "overrides": [],
@@ -1993,7 +2240,7 @@
         "opam": {
           "name": "eqaf",
           "version": "0.7",
-          "path": "esy.lock/opam/eqaf.0.7"
+          "path": "solo5.esy.lock/opam/eqaf.0.7"
         }
       },
       "overrides": [],
@@ -2020,7 +2267,7 @@
         "opam": {
           "name": "easy-format",
           "version": "1.3.2",
-          "path": "esy.lock/opam/easy-format.1.3.2"
+          "path": "solo5.esy.lock/opam/easy-format.1.3.2"
         }
       },
       "overrides": [],
@@ -2045,7 +2292,7 @@
         "opam": {
           "name": "duration",
           "version": "0.1.3",
-          "path": "esy.lock/opam/duration.0.1.3"
+          "path": "solo5.esy.lock/opam/duration.0.1.3"
         }
       },
       "overrides": [],
@@ -2070,7 +2317,7 @@
         "opam": {
           "name": "dune-configurator",
           "version": "2.7.1",
-          "path": "esy.lock/opam/dune-configurator.2.7.1"
+          "path": "solo5.esy.lock/opam/dune-configurator.2.7.1"
         }
       },
       "overrides": [],
@@ -2097,13 +2344,13 @@
         "opam": {
           "name": "dune",
           "version": "2.7.1",
-          "path": "esy.lock/opam/dune.2.7.1"
+          "path": "solo5.esy.lock/opam/dune.2.7.1"
         }
       },
       "overrides": [
         {
           "opamoverride":
-            "esy.lock/overrides/opam__s__dune_opam__c__2.7.1_opam_override"
+            "solo5.esy.lock/overrides/opam__s__dune_opam__c__2.7.1_opam_override"
         }
       ],
       "dependencies": [
@@ -2129,7 +2376,7 @@
         "opam": {
           "name": "domain-name",
           "version": "0.3.0",
-          "path": "esy.lock/opam/domain-name.0.3.0"
+          "path": "solo5.esy.lock/opam/domain-name.0.3.0"
         }
       },
       "overrides": [],
@@ -2157,7 +2404,7 @@
         "opam": {
           "name": "cstruct",
           "version": "6.0.0",
-          "path": "esy.lock/opam/cstruct.6.0.0"
+          "path": "solo5.esy.lock/opam/cstruct.6.0.0"
         }
       },
       "overrides": [],
@@ -2184,7 +2431,7 @@
         "opam": {
           "name": "csexp",
           "version": "1.3.2",
-          "path": "esy.lock/opam/csexp.1.3.2"
+          "path": "solo5.esy.lock/opam/csexp.1.3.2"
         }
       },
       "overrides": [],
@@ -2210,7 +2457,7 @@
         "opam": {
           "name": "cppo",
           "version": "1.6.6",
-          "path": "esy.lock/opam/cppo.1.6.6"
+          "path": "solo5.esy.lock/opam/cppo.1.6.6"
         }
       },
       "overrides": [],
@@ -2234,13 +2481,13 @@
         "opam": {
           "name": "conf-pkg-config",
           "version": "1.3",
-          "path": "esy.lock/opam/conf-pkg-config.1.3"
+          "path": "solo5.esy.lock/opam/conf-pkg-config.1.3"
         }
       },
       "overrides": [
         {
           "opamoverride":
-            "esy.lock/overrides/opam__s__conf_pkg_config_opam__c__1.3_opam_override"
+            "solo5.esy.lock/overrides/opam__s__conf_pkg_config_opam__c__1.3_opam_override"
         }
       ],
       "dependencies": [
@@ -2259,13 +2506,13 @@
         "opam": {
           "name": "conf-m4",
           "version": "1",
-          "path": "esy.lock/opam/conf-m4.1"
+          "path": "solo5.esy.lock/opam/conf-m4.1"
         }
       },
       "overrides": [
         {
           "opamoverride":
-            "esy.lock/overrides/opam__s__conf_m4_opam__c__1_opam_override"
+            "solo5.esy.lock/overrides/opam__s__conf_m4_opam__c__1_opam_override"
         }
       ],
       "dependencies": [
@@ -2273,6 +2520,26 @@
         "@esy-ocaml/substs@0.0.1@d41d8cd9"
       ],
       "devDependencies": []
+    },
+    "@opam/conf-libseccomp@opam:1@2c2427da": {
+      "id": "@opam/conf-libseccomp@opam:1@2c2427da",
+      "name": "@opam/conf-libseccomp",
+      "version": "opam:1",
+      "source": {
+        "type": "install",
+        "source": [ "no-source:" ],
+        "opam": {
+          "name": "conf-libseccomp",
+          "version": "1",
+          "path": "solo5.esy.lock/opam/conf-libseccomp.1"
+        }
+      },
+      "overrides": [],
+      "dependencies": [
+        "@opam/conf-pkg-config@opam:1.3@93481236",
+        "@esy-ocaml/substs@0.0.1@d41d8cd9"
+      ],
+      "devDependencies": [ "@opam/conf-pkg-config@opam:1.3@93481236" ]
     },
     "@opam/cmdliner@opam:1.0.4@93208aac": {
       "id": "@opam/cmdliner@opam:1.0.4@93208aac",
@@ -2287,7 +2554,7 @@
         "opam": {
           "name": "cmdliner",
           "version": "1.0.4",
-          "path": "esy.lock/opam/cmdliner.1.0.4"
+          "path": "solo5.esy.lock/opam/cmdliner.1.0.4"
         }
       },
       "overrides": [],
@@ -2309,7 +2576,7 @@
         "opam": {
           "name": "bos",
           "version": "0.2.0",
-          "path": "esy.lock/opam/bos.0.2.0"
+          "path": "solo5.esy.lock/opam/bos.0.2.0"
         }
       },
       "overrides": [],
@@ -2345,7 +2612,7 @@
         "opam": {
           "name": "biniou",
           "version": "1.2.1",
-          "path": "esy.lock/opam/biniou.1.2.1"
+          "path": "solo5.esy.lock/opam/biniou.1.2.1"
         }
       },
       "overrides": [],
@@ -2371,7 +2638,32 @@
         "opam": {
           "name": "bigarray-compat",
           "version": "1.0.0",
-          "path": "esy.lock/opam/bigarray-compat.1.0.0"
+          "path": "solo5.esy.lock/opam/bigarray-compat.1.0.0"
+        }
+      },
+      "overrides": [],
+      "dependencies": [
+        "ocaml@4.10.1002@d41d8cd9", "@opam/dune@opam:2.7.1@f5f493bc",
+        "@esy-ocaml/substs@0.0.1@d41d8cd9"
+      ],
+      "devDependencies": [
+        "ocaml@4.10.1002@d41d8cd9", "@opam/dune@opam:2.7.1@f5f493bc"
+      ]
+    },
+    "@opam/bheap@opam:2.0.0@3d917eb4": {
+      "id": "@opam/bheap@opam:2.0.0@3d917eb4",
+      "name": "@opam/bheap",
+      "version": "opam:2.0.0",
+      "source": {
+        "type": "install",
+        "source": [
+          "archive:https://opam.ocaml.org/cache/sha256/5f/5f43d7b237bc87b07097f60eae2b32de64e644158308da338bf1512014bdf636#sha256:5f43d7b237bc87b07097f60eae2b32de64e644158308da338bf1512014bdf636",
+          "archive:https://github.com/backtracking/bheap/releases/download/2.0.0/bheap-2.0.0.tbz#sha256:5f43d7b237bc87b07097f60eae2b32de64e644158308da338bf1512014bdf636"
+        ],
+        "opam": {
+          "name": "bheap",
+          "version": "2.0.0",
+          "path": "solo5.esy.lock/opam/bheap.2.0.0"
         }
       },
       "overrides": [],
@@ -2393,7 +2685,7 @@
         "opam": {
           "name": "base-unix",
           "version": "base",
-          "path": "esy.lock/opam/base-unix.base"
+          "path": "solo5.esy.lock/opam/base-unix.base"
         }
       },
       "overrides": [],
@@ -2410,7 +2702,7 @@
         "opam": {
           "name": "base-threads",
           "version": "base",
-          "path": "esy.lock/opam/base-threads.base"
+          "path": "solo5.esy.lock/opam/base-threads.base"
         }
       },
       "overrides": [],
@@ -2427,7 +2719,7 @@
         "opam": {
           "name": "base-bytes",
           "version": "base",
-          "path": "esy.lock/opam/base-bytes.base"
+          "path": "solo5.esy.lock/opam/base-bytes.base"
         }
       },
       "overrides": [],
@@ -2452,7 +2744,7 @@
         "opam": {
           "name": "base",
           "version": "v0.14.0",
-          "path": "esy.lock/opam/base.v0.14.0"
+          "path": "solo5.esy.lock/opam/base.v0.14.0"
         }
       },
       "overrides": [],
@@ -2480,7 +2772,7 @@
         "opam": {
           "name": "astring",
           "version": "0.8.5",
-          "path": "esy.lock/opam/astring.0.8.5"
+          "path": "solo5.esy.lock/opam/astring.0.8.5"
         }
       },
       "overrides": [],
