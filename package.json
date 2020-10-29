@@ -11,20 +11,54 @@
     "@opam/dune": "^2.6.2",
     "@opam/lwt": "^5.3.0",
     "@opam/mirage": "^3.8.0",
+    "@opam/mirage-bootvar-solo5": "0.6.0",
     "@opam/mirage-bootvar-unix": "^0.1.0",
+    "@opam/mirage-clock-freestanding": "^3.0.1",
     "@opam/mirage-clock-unix": "^3.0.1",
     "@opam/mirage-logs": "^1.2.0",
     "@opam/mirage-runtime": "^3.8.0",
+    "@opam/mirage-solo5": "^0.6.4",
     "@opam/mirage-types": "^3.8.0",
     "@opam/mirage-types-lwt": "^3.8.0",
     "@opam/mirage-unix": "^4.0.0",
-    "ocaml": "~4.10.1002",
-    "@opam/ocamlgraph": "1.8.8"
+    "@opam/ocaml-freestanding": "^0.6.3",
+    "@opam/ocaml-src": "4.10.1",
+    "@opam/ocamlgraph": "1.8.8",
+    "ocaml": "~4.10.1002"
   },
   "devDependencies": {
     "reason-mobile": "github:EduardoRFS/reason-mobile:generate.json#ca7b8c8330b1b071ed1e1c1491c3ca2764907976"
   },
   "resolutions": {
-    "@opam/num": "github:dune-universe/num:num.opam#bdb2d7653e927e142b701b51d89f393471279713"
+    "@opam/num": "github:dune-universe/num:num.opam#bdb2d7653e927e142b701b51d89f393471279713",
+    "ocaml": "4.10.1002",
+    "@opam/mirage-solo5": {
+      "source": "EduardoRFS/mirage-solo5:mirage-solo5.opam#3278f33505c5f98f1dac31c6185742a35fdfbc89",
+      "override": {
+        "exportedEnv": {
+          "PKG_CONFIG_PATH": {
+            "val": "#{self.lib / 'pkgconfig' }:$PKG_CONFIG_PATH",
+            "scope": "global"
+          }
+        }
+      }
+    },
+    "@opam/ocaml-freestanding": {
+      "source": "EduardoRFS/ocaml-freestanding:opam#6fb09cb8b44bacc52a8beb411577c2b5ee8a1785",
+      "override": {
+        "buildEnv": {
+          "PKG_CONFIG_PATH": "#{@opam/solo5-bindings-hvt.lib / 'pkgconfig'}:$PKG_CONFIG_PATH"
+        },
+        "exportedEnv": {
+          "PKG_CONFIG_PATH": {
+            "val": "#{self.lib / 'pkgconfig' }:#{@opam/solo5-bindings-hvt.lib / 'pkgconfig'}:$PKG_CONFIG_PATH",
+            "scope": "global"
+          }
+        },
+        "dependencies": {
+          "@opam/solo5-bindings-hvt": "*"
+        }
+      }
+    }
   }
 }
