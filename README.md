@@ -1,4 +1,4 @@
-# uni-fucking-kernel
+# esy-mirage-kernel
 
 Just a template of running mirage with esy
 
