@@ -2,3 +2,4 @@ _esy
 .merlin
 *.install
 _build
+.mocks

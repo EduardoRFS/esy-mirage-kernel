@@ -18,6 +18,13 @@
     "@opam/mirage-types": "^3.8.0",
     "@opam/mirage-types-lwt": "^3.8.0",
     "@opam/mirage-unix": "^4.0.0",
-    "ocaml": "~4.10.1002"
+    "ocaml": "~4.10.1002",
+    "@opam/ocamlgraph": "1.8.8"
+  },
+  "devDependencies": {
+    "reason-mobile": "github:EduardoRFS/reason-mobile:generate.json#fd51cc76b41df3bcb163841d902d23aa52a66a13"
+  },
+  "resolutions": {
+    "@opam/num": "github:dune-universe/num:num.opam#bdb2d7653e927e142b701b51d89f393471279713"
   }
 }
