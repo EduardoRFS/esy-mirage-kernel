@@ -18,6 +18,6 @@
     "@opam/mirage-types": "^3.8.0",
     "@opam/mirage-types-lwt": "^3.8.0",
     "@opam/mirage-unix": "^4.0.0",
-    "ocaml": "4.10.0"
+    "ocaml": "~4.10.1002"
   }
 }
