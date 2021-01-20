@@ -29,12 +29,12 @@ synopsis: "The base MirageOS runtime library, part of every MirageOS unikernel"
 description: """
 A bundle of useful runtime functions for applications built with MirageOS
 """
-x-commit-hash: "3d71cc923326fc6afbcebc614cc570897aeb5461"
+x-commit-hash: "b121300fa2bc17c80d42283ac7e4d2ffe4542fd0"
 url {
   src:
-    "https://github.com/mirage/mirage/releases/download/v3.9.0/mirage-v3.9.0.tbz"
+    "https://github.com/mirage/mirage/releases/download/v3.10.1/mirage-v3.10.1.tbz"
   checksum: [
-    "sha256=8a5207c01b5073dbdafe2de7b61d4e907ee989132ec56e38e793cab01381f6c3"
-    "sha512=acf7d433041e824f7252b563bd31d10aa3a087be30239d9115a875d744f2dfbccc699006e89d6b3fe0c7f16e101d0ca95b971a016bda3f38297dc36d1bc56986"
+    "sha256=a4c2851880eaa226f87f8a7f142bdc716359f0c9da9a663899d341fbc5d795be"
+    "sha512=40cb4a8624f750e3a8303ccf7a75eb953a3fe94381a31b7f0ee37c375f43825dfb181cf10981bed5bd1ac33dcaf6d01c6a84bd2b5d724019a51ac2d03be0430c"
   ]
 }
